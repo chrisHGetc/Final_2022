@@ -184,6 +184,8 @@ gayfish <- fisher.test(table3)
 gayfish
 ```
 
+The data presented above indicates the results of a statistical analysis conducted on LGBTQ gay patients using Pearson's Chi-squared test with Yates' continuity correction. The test aimed to explore the relationship between the treatment (placebo or vaccine) and the occurrence of Covid91 infection (infected or ok). The Chi-squared test yielded a significant result  p-value = 7e-08, suggesting that there is a statistically significant association between the treatment and the occurrence of Covid91 infection among LGBTQ gay patients. 
+
 ## Druggies
 
 
