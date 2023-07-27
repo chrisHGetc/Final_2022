@@ -253,6 +253,9 @@ hi=(drugfish$conf.int[2]/(drugfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
+In the drug user patients population, the data analysis demonstrated a treatment effectiveness of 11% with a 95% confidence interval ranging from 4.59% to 21.82%. As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
+
+
 
 # Overall Results and Conclusions
 
