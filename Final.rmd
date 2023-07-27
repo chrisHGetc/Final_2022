@@ -109,7 +109,12 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 The box plot analysis, focusing on female patients receiving either the vaccine or placebo, reveals some intriguing findings. Among female patients who received the placebo, approximately 60% were infected with the covid91 virus, while those who received the vaccine had a lower infection rate of around 40%. Interestingly, both the placebo and vaccine groups showed a similar proportion of patients who remained uninfected, at approximately 50%. These observations raise questions about the factors influencing the infection rates in both groups and warrant further in-depth analysis to gain a clearer understanding of the underlying dynamics. Additional investigations and careful consideration of potential confounding variables are essential to elucidate the factors contributing to the differential infection rates between the placebo and vaccine groups in the female population.
 
-
+### Numerical Descriptive Results
+```{r}
+table2 <- xtabs(~infected + treatment, data=female_data)
+rowPerc(table2)
+colPerc(table2)
+```
 
 
 ## LGBTQ
