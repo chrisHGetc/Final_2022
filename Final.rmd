@@ -198,6 +198,8 @@ hi=(gayfish$conf.int[2]/(gayfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
+In the LGBTQ gay patient population, the data analysis demonstrated a treatment effectiveness of 15% with a 95% confidence interval ranging from 7.603% to 26.56%. As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
+
 
 ## Druggies
 
