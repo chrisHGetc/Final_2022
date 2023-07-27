@@ -88,6 +88,7 @@ options(digits=2)
 ```
 
 #### Effectiveness Confidence Interval `r low`  to `r hi`
+Based on the analysis of male data, the treatment demonstrated an effectiveness of 69.2% (95% CI: 64.26% - 73.76%). These results indicate a notable efficacy of the treatment among male participants, with a substantial proportion experiencing positive outcomes. The narrow confidence interval suggests a high level of precision in our estimation, providing strong confidence that the true effectiveness of the treatment falls within the reported range. These findings offer valuable insights into the treatment's potential impact on the male demographic and contribute significantly to our understanding of its effectiveness in this specific population.
 
 
 ## Females
