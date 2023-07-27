@@ -238,4 +238,14 @@ drugfish <- fisher.test(table4)
 drugfish
 ```
 
+The provided data subject are patient that use drugs. The Chi-squared test was used to analyze the association between treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. According to the results, the Chi-square statistic yielded a value of 35 with 1 degree of freedom and an extremely low p-value of 3e-09. This indicates a highly significant association between the treatment and infection rates among drug users. The Fisher's Exact Test, which tests the odds ratio, resulted in a p-value of 2e-10. The alternative hypothesis suggests that the true odds ratio is not equal to 1. Overall, this statistical analysis provides strong evidence that there is a significant association between the treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. The low odds ratio suggests that vaccinated drug users might be at a higher risk of infection.
+
+
 # Overall Results and Conclusions
+
+
+
+
+
+
+
