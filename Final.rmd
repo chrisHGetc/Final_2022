@@ -221,4 +221,12 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 At first glance of the data pertaining to drug users, it seems that the vaccinated group has a higher rate of infection, with 85% of vaccinated individuals getting infected, compared to only 10% of those who received the placebo. Among the uninfected, approximately 50% received the placebo, while 48% were vaccinated. This discrepancy raises more questions since the percentage of infected individuals is much higher in the vaccinated group compared to the placebo group. Further analysis of the data is required to draw proper conclusions.
 
+### Numerical Descriptive Results
+
+```{r}
+table4 <- xtabs(~infected + treatment, data=drug_data)
+rowPerc(table4)
+colPerc(table4)
+```
+
 # Overall Results and Conclusions
