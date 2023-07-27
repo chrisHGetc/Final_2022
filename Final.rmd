@@ -72,7 +72,22 @@ malefish <- fisher.test(table1)
 malefish
 ```
 
-The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of 55.1832 with 1 degree of freedom and an extremely small p-value of 0.0000000000001098. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value of 0.00000000000004631 and a 95% confidence interval for the odds ratio of [1.798068, 2.810778]. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection. 
+The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of 55.1832 with 1 degree of freedom and an extremely small p-value of 0.0000000000001098. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value of 0.00000000000004631 and a 95% confidence interval for the odds ratio of [1.798068, 2.810778]. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
+
+### Effectiveness Confidence Interval 
+
+```{r}
+effect <- malefish$p.value/(malefish$p.value +1)
+effectivenessmale = malefish$estimate/(malefish$estimate +1)*100
+print(effectivenessmale)
+```
+```{r}
+low=(malefish$conf.int[1]/(malefish$conf.int[1] +1))*100
+hi=(malefish$conf.int[2]/(malefish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+#### Effectiveness Confidence Interval `r low`  to `r hi`
 
 
 ## Females
