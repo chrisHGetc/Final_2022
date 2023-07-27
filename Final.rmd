@@ -128,6 +128,8 @@ chisqtestGC(table2)
 femalefish <- fisher.test(table2)
 femalefish
 ```
+In the female patients, a comprehensive statistical analysis was performed to investigate the relationship between treatment and infection status. Pearson's Chi-squared test with Yates' continuity correction was conducted on the data, revealing a significant association between the treatment (placebo and vaccine) and infection status (covid19 and OK) in females. The test yielded a chi-square statistic of 13 with 1 degree of freedom and an impressively low p-value of 0.0003, indicating strong evidence against the null hypothesis. Additionally, Fisher's Exact Test for Count Data was applied, producing a similarly small p-value of 0.0002 and a 95% confidence interval for the odds ratio between 1.2 and 1.9.
+
 
 ## LGBTQ
 
