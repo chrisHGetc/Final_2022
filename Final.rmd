@@ -52,6 +52,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+Upon visual examination of the data represented in a box plot, it becomes evident that male patients who received a placebo exhibited a higher rate of covid91 infections, accounting for approximately 69% of male infections. In contrast, male patients who received the vaccine had a lower infection rate, constituting approximately 30% of the male infections. This graphical representation highlights the disparity in infection rates between the two treatment groups and suggests a potential association between the treatment (placebo vs. vaccine) and covid91 infection susceptibility in male patients. However, further rigorous statistical analysis would be necessary to establish the significance of these findings and draw firm conclusions about the vaccine's effectiveness in mitigating covid infections in this specific male population.
 
 
 
