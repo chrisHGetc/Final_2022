@@ -61,9 +61,9 @@ table1 <- xtabs(~infected + treatment, data=male_data)
 rowPerc(table1)
 colPerc(table1)
 ```
-The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 69.57% were in the placebo group, and 30.43% were in the vaccine group. Among those in the placebo group, 2.55% were infected with covid19, and 97.45% were not infected (OK). In contrast, in the vaccine group, 1.15% were infected with covid19, and 98.85% were not infected. Overall, the table indicates a higher proportion of covid19 infections in the placebo group (2.55%) compared to the vaccine group (1.15%), suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
+The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 70% were in the placebo group, and 30% were in the vaccine group. Among those in the placebo group the males studies were 2.55 times more chanc of being infected with covid19. Overall, the table indicates a higher proportion of covid19 infections in the placebo group there were 2.55 times more likely to contract covid19, suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
 
-## Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table1)
@@ -72,7 +72,7 @@ malefish <- fisher.test(table1)
 malefish
 ```
 
-The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of 55.1832 with 1 degree of freedom and an extremely small p-value of 0.0000000000001098. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value of 0.00000000000004631 and a 95% confidence interval for the odds ratio of [1.798068, 2.810778]. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
+The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of an extremely small p-value = 1e-13. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value = 5e-14. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
 
 ### Effectiveness Confidence Interval 
 
@@ -117,11 +117,11 @@ colPerc(table2)
 ```
 The updated data presented in the contingency table pertains to female individuals and their infection status based on treatment (placebo and vaccine). Among female participants, 60% were infected with covid19 in the placebo group, while 40% were infected in the vaccine group. The overall distribution shows an equal split, with 50% of female individuals in each treatment group belonging to the OK category.
 
-Analyzing the percentages within each treatment group, 2% of females in the placebo group were infected with covid19, leaving 98% uninfected. In contrast, in the vaccine group, 1.4% of females were infected with covid19, and 98.6% remained uninfected. These findings suggest a higher proportion of covid19 infections among females in the placebo group compared to those in the vaccine group.
+Analyzing the percentages within each treatment group, the females in the placebo group had 2 times chance of getting infected with covid19, leaving 98% uninfected. In contrast, in the vaccine group, it was shown to be 1.4 times less likely for females patients to be infected with covid19. These findings suggest a higher proportion of covid19 infections among females in the placebo group compared to those in the vaccine group.
 
 However, to assess the significance of this discrepancy and establish any potential causal relationship between the treatment and infection status specifically in the female population, further rigorous statistical analysis would be required. The observed data provides valuable initial insights, but drawing definitive conclusions would necessitate applying appropriate statistical tests to evaluate the significance of the observed differences.
 
-## Inferential Results
+### Inferential Results
 ```{r}
 chisq.test(table2)
 chisqtestGC(table2)
@@ -174,9 +174,9 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
-In the LGBTQ data presented in the contingency table relates to individuals' infection status based on treatment (placebo and vaccine). Among gay individuals, 15% were infected with covid19 in the placebo group, whereas 85% were infected in the vaccine group. In the OK (uninfected) category, 50% of gay individuals belonged to the placebo group, and 50% to the vaccine group. Looking at the percentages within each treatment group, 0.66% of gay individuals in the placebo group were infected with covid19, while 99.34% were not infected. In the vaccine group, 3.5% were infected with covid19, and 96.5% remained uninfected. These findings suggest a notably higher proportion of covid19 infections among gay individuals in the vaccine group compared to the placebo group. 
+In the LGBTQ data presented in the contingency table relates to individuals' infection status based on treatment (placebo and vaccine). Among gay individuals, 15% were infected with covid19 in the placebo group, whereas 85% were infected in the vaccine group. In the OK (uninfected) category, 50% of gay individuals belonged to the placebo group, and 50% to the vaccine group. In the vaccine group, its shows to be 3.5 times more likely to be infected with covid19. These findings suggest a notably higher proportion of covid19 infections among gay individuals in the vaccine group compared to the placebo group. 
 
-## Inferential Results
+### Inferential Results
 ```{r}
 chisq.test(table3)
 chisqtestGC(table3)
@@ -189,8 +189,8 @@ The data presented above indicates the results of a statistical analysis conduct
 ### Effectiveness Confidence Interval
 ```{r}
 effect <- gayfish$p.value/(gayfish$p.value +1)
-effectivenessgayfish = gayfish$estimate/(gayfish$estimate +1)*100
-print(effectivenessgayfish)
+effectivenessgay = gayfish$estimate/(gayfish$estimate +1)*100
+print(effectivenessgay)
 ```
 ```{r}
 low=(gayfish$conf.int[1]/(gayfish$conf.int[1] +1))*100
@@ -228,9 +228,9 @@ table4 <- xtabs(~infected + treatment, data=drug_data)
 rowPerc(table4)
 colPerc(table4)
 ```
-In the of drug users patients, the data presented in the contingency table reveals the infection status based on the treatment received (placebo and vaccine). Among drug users, 12% were infected with covid19 in the placebo group, while 88% were infected in the vaccine group. In the category of "OK" (uninfected), 51% of drug users belonged to the placebo group, and 49% to the vaccine group. Analyzing the percentages within each treatment group, 0.4% of drug users in the placebo group were infected with covid19, while 99.6% were not infected. In the vaccine group, 3.1% were infected with covid19, and 96.9% remained uninfected. These findings suggest a considerably higher proportion of covid19 infections among drug users who received the vaccine compared to those who received the placebo. However, further in-depth analysis is necessary to assess the significance of these results and determine any potential associations between the treatment and infection status specifically in the drug user population. Understanding the factors influencing infection rates is crucial for tailoring effective prevention and intervention strategies in this vulnerable group.
+In the of drug users patients, the data presented in the contingency table reveals the infection status based on the treatment received (placebo and vaccine). Among drug users, 12% were infected with covid19 in the placebo group, while 88% were infected in the vaccine group. In the category of "OK" (uninfected), 51% of drug users belonged to the placebo group, and 49% to the vaccine group. Analyzing the percentages within each treatment group, 0.4% of drug users in the placebo group were infected with covid19, while 99.6% were not infected. In the vaccine group, the vaccinated were 3.1 times more likely to be infected with covid19. These findings suggest a considerably higher proportion of covid19 infections among drug users who received the vaccine compared to those who received the placebo. However, further in-depth analysis is necessary to assess the significance of these results and determine any potential associations between the treatment and infection status specifically in the drug user population. Understanding the factors influencing infection rates is crucial for tailoring effective prevention and intervention strategies in this vulnerable group.
 
-## Inferential Results
+### Inferential Results
 ```{r}
 chisq.test(table4)
 chisqtestGC(table4)
@@ -238,13 +238,13 @@ drugfish <- fisher.test(table4)
 drugfish
 ```
 
-The provided data subject are patients that use drugs. The Chi-squared test was used to analyze the association between treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. According to the results, the Chi-square statistic yielded a value of 35 with 1 degree of freedom and an extremely low p-value of 3e-09. This indicates a highly significant association between the treatment and infection rates among drug users. The Fisher's Exact Test, which tests the odds ratio, resulted in a p-value of 2e-10. The alternative hypothesis suggests that the true odds ratio is not equal to 1. Overall, this statistical analysis provides strong evidence that there is a significant association between the treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users.
+The provided data subject are patients that use drugs. The Chi-squared test was used to analyze the association between treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. According to the results, the Chi-square statistic yielded a value of 35 with 1 degree of freedom and an extremely low p-value= 3e-09. This indicates a highly significant association between the treatment and infection rates among drug users. The Fisher's Exact Test, which tests the odds ratio, resulted in a p-value=2e-10. Overall, this statistical analysis provides strong evidence that there is a significant association between the treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users.
 
 ### Effectiveness Confidence Interval
 ```{r}
 effect <- drugfish$p.value/(drugfish$p.value +1)
-effectivenessdrugfish = drugfish$estimate/(drugfish$estimate +1)*100
-print(effectivenessdrugfish)
+effectivenessdrug = drugfish$estimate/(drugfish$estimate +1)*100
+print(effectivenessdrug)
 ```
 
 ```{r}
@@ -259,7 +259,13 @@ In the drug user patients population, the data analysis demonstrated a treatment
 
 # Overall Results and Conclusions
 
+In conclusion, the efficacy of the Covid19 treatment was found to be inadequate in safeguarding the LGBTQ and drug users' populations. The effectiveness of the treatment for these groups was reported as `r effectivenessgay` for gay individuals and `r effectivenessdrug` for drug users.
 
+Conversely, the vaccine demonstrated notable success in protecting both women and men against Covid19. The effectiveness of the vaccine in males was `r effectivenessmale`, while in females, it was `r effectivenessfemale`. These gender-specific categories exhibited the highest level of protection with this vaccine.
+
+However, concerning individuals who identified as gay, the vaccine displayed limited efficacy. Those who identified as gay and received the vaccine were found to be 3.5 times more likely to contract Covid19 compared to those who received the placebo.Similarly, vaccinated drug users also exhibited reduced effectiveness, being 3.1 times more likely to acquire Covid19 after receiving the vaccine.
+
+As a result, if you belong to the LGBTQ community or are a drug user, it is not recommended to receive the vaccine due to its limited effectiveness. However, for individuals identifying as straight female or male, the vaccine has shown to be effective and a recommendation would be appropriate to protect against Covid19.
 
 
 
