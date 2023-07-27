@@ -115,7 +115,11 @@ table2 <- xtabs(~infected + treatment, data=female_data)
 rowPerc(table2)
 colPerc(table2)
 ```
+The updated data presented in the contingency table pertains to female individuals and their infection status based on treatment (placebo and vaccine). Among female participants, 60% were infected with covid91 in the placebo group, while 40% were infected in the vaccine group. The overall distribution shows an equal split, with 50% of female individuals in each treatment group belonging to the OK category.
 
+Analyzing the percentages within each treatment group, 2% of females in the placebo group were infected with covid91, leaving 98% uninfected. In contrast, in the vaccine group, 1.4% of females were infected with covid91, and 98.6% remained uninfected. These findings suggest a higher proportion of covid91 infections among females in the placebo group compared to those in the vaccine group.
+
+However, to assess the significance of this discrepancy and establish any potential causal relationship between the treatment and infection status specifically in the female population, further rigorous statistical analysis would be required. The observed data provides valuable initial insights, but drawing definitive conclusions would necessitate applying appropriate statistical tests to evaluate the significance of the observed differences.
 
 ## LGBTQ
 
