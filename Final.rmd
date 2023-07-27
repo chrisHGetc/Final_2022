@@ -166,6 +166,14 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 Upon initial observation of the box plot graph, a notable pattern emerges in the infection rates within the LGBTQ community based on the treatment received (placebo and vaccine). Among gay individuals who received the vaccine, the infection rate is approximately 85%, significantly higher than the 15% infection rate observed in those who received the placebo. An interesting observation is that among the individuals who remained uninfected, approximately 50% received the placebo, while the other 50% received the vaccine. This observation raises intriguing questions about the vaccine's effectiveness in reducing infection rates within the LGBTQ community.This can be due to a smaller sample size in patients studied causing a lower frequency. Further investigation and careful analysis are required to comprehensively understand the underlying factors contributing to these trend. 
 
+### Numerical Descriptive Results
+
+```{r}
+table3 <- xtabs(~infected + treatment, data=gay_data)
+rowPerc(table3)
+colPerc(table3)
+```
+
 ## Druggies
 
 
