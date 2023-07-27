@@ -228,5 +228,7 @@ table4 <- xtabs(~infected + treatment, data=drug_data)
 rowPerc(table4)
 colPerc(table4)
 ```
+In the of drug users patients, the data presented in the contingency table reveals the infection status based on the treatment received (placebo and vaccine). Among drug users, 12% were infected with covid91 in the placebo group, while 88% were infected in the vaccine group. In the category of "OK" (uninfected), 51% of drug users belonged to the placebo group, and 49% to the vaccine group. Analyzing the percentages within each treatment group, 0.4% of drug users in the placebo group were infected with covid91, while 99.6% were not infected. In the vaccine group, 3.1% were infected with covid91, and 96.9% remained uninfected. These findings suggest a considerably higher proportion of covid91 infections among drug users who received the vaccine compared to those who received the placebo. However, further in-depth analysis is necessary to assess the significance of these results and determine any potential associations between the treatment and infection status specifically in the drug user population. Understanding the factors influencing infection rates is crucial for tailoring effective prevention and intervention strategies in this vulnerable group.
+
 
 # Overall Results and Conclusions
