@@ -61,7 +61,7 @@ table1 <- xtabs(~infected + treatment, data=male_data)
 rowPerc(table1)
 colPerc(table1)
 ```
-The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 70% were in the placebo group, and 30% were in the vaccine group. Among those in the placebo group the males studies were 2.55 times more chanc of being infected with covid19. Overall, the table indicates a higher proportion of covid19 infections in the placebo group there were 2.55 times more likely to contract covid19, suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
+The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 70% were in the placebo group, and 30% were in the vaccine group contracted covid19. Among those in the placebo group the males studies were 2.55 times more chance of being infected with covid19. Overall, the table indicates a higher proportion of covid19 infections in the placebo group that were 2.55 times more likely to contract covid19, suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
 
 ### Inferential Results
 
@@ -72,7 +72,7 @@ malefish <- fisher.test(table1)
 malefish
 ```
 
-The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of an extremely small p-value = 1e-13. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value = 5e-14. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
+The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of an extremely small p-value = 1.098e-13. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value = 4.631e-14. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
 
 ### Effectiveness Confidence Interval 
 
@@ -88,7 +88,7 @@ options(digits=2)
 ```
 
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-Based on the analysis of male data, the treatment demonstrated an effectiveness of 69.2% (95% CI: 64.26% - 73.76%). These results indicate a notable efficacy of the treatment among male participants, with a substantial proportion experiencing positive outcomes. The narrow confidence interval suggests a high level of precision in our estimation, providing strong confidence that the true effectiveness of the treatment falls within the reported range. These findings offer valuable insights into the treatment's potential impact on the male demographic and contribute significantly to our understanding of its effectiveness in this specific population.
+Based on the analysis of male data, the treatment demonstrated an effectiveness of 69.2% (95% CI: 64.26% - 73.76%). These results indicate a notable efficacy of the treatment among male participants due to the effectiveness being above 50%, with a substantial proportion experiencing positive outcomes. The narrow confidence interval suggests a high level of precision in our estimation, providing strong confidence that the true effectiveness of the treatment falls within the reported range. These findings offer valuable insights into the treatment's potential impact on the male demographic and contribute significantly to our understanding of its effectiveness in this specific population.
 
 
 ## Females
@@ -144,7 +144,7 @@ hi=(femalefish$conf.int[2]/(femalefish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 54.53% - 65.07%). These results highlight a significant efficacy of the treatment among female participants, with a substantial proportion experiencing positive outcomes. The narrow confidence interval indicates a high level of precision in our estimation, instilling strong confidence that the true effectiveness of the treatment lies within the reported range. These findings provide valuable insights into the treatment's potential impact on the male demographic and significantly contribute to our understanding of its effectiveness in this specific population.
+The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 54.53% - 65.07%). These results highlight a significant efficacy of the treatment among female participants due to the results being above 50%, with a substantial proportion experiencing positive outcomes. The narrow confidence interval indicates a high level of precision in our estimation, instilling strong confidence that the true effectiveness of the treatment lies within the reported range. These findings provide valuable insights into the treatment's potential impact on the male demographic and significantly contribute to our understanding of its effectiveness in this specific population.
 
 ## LGBTQ
 
@@ -198,7 +198,7 @@ hi=(gayfish$conf.int[2]/(gayfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-In the LGBTQ gay patient population, the data analysis demonstrated a treatment effectiveness of 15% with a 95% confidence interval ranging from 7.603% to 26.56%. As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
+In the LGBTQ gay patient population, the data analysis demonstrated a treatment effectiveness of 15% (95% CI: 7.603% - 26.56%). As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
 
 
 ## Druggies
@@ -253,7 +253,7 @@ hi=(drugfish$conf.int[2]/(drugfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-In the drug user patients population, the data analysis demonstrated a treatment effectiveness of 11% with a 95% confidence interval ranging from 4.59% to 21.82%. As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
+In the drug user patients population, the data analysis demonstrated a treatment effectiveness of 11% (95% CI: 4.59% - 21.82%). As the effectiveness falls below 50%, it indicates that the vaccine is ineffective in providing substantial protection within this specific group. 
 
 
 
