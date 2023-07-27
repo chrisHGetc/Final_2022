@@ -174,6 +174,8 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
+In the LGBTQ data presented in the contingency table relates to individuals' infection status based on treatment (placebo and vaccine). Among gay individuals, 15% were infected with covid91 in the placebo group, whereas 85% were infected in the vaccine group. In the OK (uninfected) category, 50% of gay individuals belonged to the placebo group, and 50% to the vaccine group. Looking at the percentages within each treatment group, 0.66% of gay individuals in the placebo group were infected with covid91, while 99.34% were not infected. In the vaccine group, 3.5% were infected with covid19, and 96.5% remained uninfected. These findings suggest a notably higher proportion of covid91 infections among gay individuals in the vaccine group compared to the placebo group. 
+
 ## Druggies
 
 
