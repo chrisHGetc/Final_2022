@@ -63,8 +63,14 @@ colPerc(table1)
 ```
 The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 69.57% were in the placebo group, and 30.43% were in the vaccine group. Among those in the placebo group, 2.55% were infected with covid19, and 97.45% were not infected (OK). In contrast, in the vaccine group, 1.15% were infected with covid19, and 98.85% were not infected. Overall, the table indicates a higher proportion of covid19 infections in the placebo group (2.55%) compared to the vaccine group (1.15%), suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
 
+## Inferential Results
 
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+malefish <- fisher.test(table1)
+malefish
+```
 
 
 
