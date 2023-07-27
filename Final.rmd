@@ -144,7 +144,7 @@ hi=(femalefish$conf.int[2]/(femalefish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-
+The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 54.53% - 65.07%). These results highlight a significant efficacy of the treatment among female participants, with a substantial proportion experiencing positive outcomes. The narrow confidence interval indicates a high level of precision in our estimation, instilling strong confidence that the true effectiveness of the treatment lies within the reported range. These findings provide valuable insights into the treatment's potential impact on the male demographic and significantly contribute to our understanding of its effectiveness in this specific population.
 
 ## LGBTQ
 
