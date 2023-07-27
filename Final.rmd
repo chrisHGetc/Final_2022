@@ -121,6 +121,14 @@ Analyzing the percentages within each treatment group, 2% of females in the plac
 
 However, to assess the significance of this discrepancy and establish any potential causal relationship between the treatment and infection status specifically in the female population, further rigorous statistical analysis would be required. The observed data provides valuable initial insights, but drawing definitive conclusions would necessitate applying appropriate statistical tests to evaluate the significance of the observed differences.
 
+## Inferential Results
+```{r}
+chisq.test(table2)
+chisqtestGC(table2)
+femalefish <- fisher.test(table2)
+femalefish
+```
+
 ## LGBTQ
 
 
