@@ -148,6 +148,21 @@ The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 5
 
 ## LGBTQ
 
+### Graphical Descriptive Results
+```{r}
+dd2 <- gay_data %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
 
 
 ## Druggies
