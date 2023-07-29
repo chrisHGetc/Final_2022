@@ -72,7 +72,7 @@ malefish <- fisher.test(table1)
 malefish
 ```
 
-The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of an extremely small p-value = 1.098e-13. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value = 4.631e-14. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
+The analysis was conducted using two statistical tests to examine the association between treatment and infection status in a study of males. Firstly, Pearson's Chi-squared test with Yates' continuity correction was performed, yielding a significant chi-square statistic of an extremely small p-value = 0.0000000000001098. Secondly, Fisher's Exact Test for Count Data was employed, producing an equally significant p-value = 0.00000000000004631. The estimated odds ratio of 2.242522 suggests that individuals in the vaccine group had approximately 2.24 times higher odds of being infected compared to those in the placebo group. These findings collectively indicate a clear and substantial relationship between the treatment and infection status, highlighting the potential impact of the vaccine on susceptibility to infection.
 
 ### Effectiveness Confidence Interval 
 
@@ -92,6 +92,7 @@ Based on the analysis of male data, the treatment demonstrated an effectiveness 
 
 
 ## Females
+### Graphical Descriptive Results
 ```{r}
 dd2 <- female_data %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
@@ -128,7 +129,7 @@ chisqtestGC(table2)
 femalefish <- fisher.test(table2)
 femalefish
 ```
-In the female patients, a comprehensive statistical analysis was performed to investigate the relationship between treatment and infection status. Pearson's Chi-squared test with Yates' continuity correction was conducted on the data, revealing a significant association between the treatment (placebo and vaccine) and infection status (covid19 and OK) in females. The test yielded a chi-square statistic of 13 with 1 degree of freedom and an impressively low p-value of 0.0003, indicating strong evidence against the null hypothesis. Additionally, Fisher's Exact Test for Count Data was applied, producing a similarly small p-value of 0.0002 and a 95% confidence interval for the odds ratio between 1.2 and 1.9.
+In the female patients, a comprehensive statistical analysis was performed to investigate the relationship between treatment and infection status. Pearson's Chi-squared test with Yates' continuity correction was conducted on the data, revealing a significant association between the treatment (placebo and vaccine) and infection status (covid19 and OK) in females. The test yielded a chi-square statistic of 13 with 1 degree of freedom and an impressively low p-value= 0.0003, indicating strong evidence against the null hypothesis. Additionally, Fisher's Exact Test for Count Data was applied, producing a similarly small p-value= 0.0002 and a 95% confidence interval for the odds ratio between 1.2 and 1.9.
 
 ### Effectiveness Confidence Interval 
 
@@ -184,7 +185,7 @@ gayfish <- fisher.test(table3)
 gayfish
 ```
 
-The data presented above indicates the results of a statistical analysis conducted on LGBTQ gay patients using Pearson's Chi-squared test with Yates' continuity correction. The test aimed to explore the relationship between the treatment (placebo or vaccine) and the occurrence of Covid19 infection (infected or OK). The Chi-squared test yielded a significant result  p-value = 7e-08, suggesting that there is a statistically significant association between the treatment and the occurrence of Covid19 infection among LGBTQ gay patients. 
+The data presented above indicates the results of a statistical analysis conducted on LGBTQ gay patients using Pearson's Chi-squared test with Yates' continuity correction. The test aimed to explore the relationship between the treatment (placebo or vaccine) and the occurrence of Covid19 infection (infected or OK). The Chi-squared test yielded a significant result  p-value = 0.00000007, suggesting that there is a statistically significant association between the treatment and the occurrence of Covid19 infection among LGBTQ gay patients. 
 
 ### Effectiveness Confidence Interval
 ```{r}
@@ -238,7 +239,7 @@ drugfish <- fisher.test(table4)
 drugfish
 ```
 
-The provided data subject are patients that use drugs. The Chi-squared test was used to analyze the association between treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. According to the results, the Chi-square statistic yielded a value of 35 with 1 degree of freedom and an extremely low p-value= 3e-09. This indicates a highly significant association between the treatment and infection rates among drug users. The Fisher's Exact Test, which tests the odds ratio, resulted in a p-value=2e-10. Overall, this statistical analysis provides strong evidence that there is a significant association between the treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users.
+The provided data subject are patients that use drugs. The Chi-squared test was used to analyze the association between treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users. According to the results, the Chi-square statistic yielded a value of 35 with 1 degree of freedom and an extremely low p-value= 0.000000003. This indicates a highly significant association between the treatment and infection rates among drug users. The Fisher's Exact Test, which tests the odds ratio, resulted in a p-value= 0.0000000002. Overall, this statistical analysis provides strong evidence that there is a significant association between the treatment (placebo and vaccine) and infection rates (Covid19 and OK) among drug users.
 
 ### Effectiveness Confidence Interval
 ```{r}
