@@ -28,7 +28,7 @@ drug_data = filter(FinalData, DrugUser =="yes")
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine, it is suspected that the drug may exhibit different effectiveness across the variety of sub populations being tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in each subgroup should take the vaccine. Structure your report in four sections, each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbiage when referencing p-values in conclusions.
 
 ## Methods
 
@@ -61,7 +61,9 @@ table1 <- xtabs(~infected + treatment, data=male_data)
 rowPerc(table1)
 colPerc(table1)
 ```
-The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 70% were in the placebo group, and 30% were in the vaccine group contracted covid19. Among those in the placebo group the males studies were 2.55 times more chance of being infected with covid19. Overall, the table indicates a higher proportion of covid19 infections in the placebo group that were 2.55 times more likely to contract covid19, suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
+The data presented in the contingency table shows the distribution of individuals based on treatment (placebo and vaccine) and infection status covid19 and OK (uninfected). Out of the total male individuals in the study, 70% were in the placebo group, and 30% were in the vaccine group contracted covid19. Among those in the placebo group the males studies were 2.55 times more chance of being infected with covid19. 
+
+Overall, the table indicates a higher proportion of covid19 infections in the placebo group that were 2.55 times more likely to contract covid19, suggesting a potential association between the treatment and infection status. However, a thorough statistical analysis, such as chi-square tests or logistic regression, would be required to determine the significance of this association and draw more definitive conclusions about the effectiveness of the vaccine in preventing covid19 infections.
 
 ### Inferential Results
 
@@ -145,7 +147,7 @@ hi=(femalefish$conf.int[2]/(femalefish$conf.int[2] +1))*100
 options(digits=2)
 ```
 #### Effectiveness Confidence Interval `r low`  to `r hi`
-The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 54.53% - 65.07%). These results highlight a significant efficacy of the treatment among female participants due to the results being above 50%, with a substantial proportion experiencing positive outcomes. The narrow confidence interval indicates a high level of precision in our estimation, instilling strong confidence that the true effectiveness of the treatment lies within the reported range. These findings provide valuable insights into the treatment's potential impact on the male demographic and significantly contribute to our understanding of its effectiveness in this specific population.
+The analysis of female data revealed a treatment effectiveness of 60% (95% CI: 54.53% - 65.07%). These results highlight a significant efficacy of the treatment among female participants due to the results being above 50%, with a substantial proportion experiencing positive outcomes. The narrow confidence interval indicates a high level of precision in our estimation, instilling strong confidence that the true effectiveness of the treatment lies within the reported range. These findings provide valuable insights into the treatment's potential impact on the female demographic and significantly contribute to our understanding of its effectiveness in this specific population.
 
 ## LGBTQ
 
@@ -175,7 +177,7 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
-In the LGBTQ data presented in the contingency table relates to individuals' infection status based on treatment (placebo and vaccine). Among gay individuals, 15% were infected with covid19 in the placebo group, whereas 85% were infected in the vaccine group. In the OK (uninfected) category, 50% of gay individuals belonged to the placebo group, and 50% to the vaccine group. In the vaccine group, its shows to be 3.5 times more likely to be infected with covid19. These findings suggest a notably higher proportion of covid19 infections among gay individuals in the vaccine group compared to the placebo group. 
+In the LGBTQ data presented in the contingency table, it relates to the individuals' infection status based on treatment (placebo and vaccine). Among gay individuals, 15% were infected with covid19 in the placebo group, whereas 85% were infected in the vaccine group. In the OK (uninfected) category, 50% of gay individuals belonged to the placebo group, and 50% to the vaccine group. In this sub group, it shows to be 3.5 times more likely to be infected with covid19 after receiving the vaccine. These findings suggest a notably higher proportion of covid19 infections among gay individuals in the vaccine group compared to the placebo group.
 
 ### Inferential Results
 ```{r}
@@ -229,7 +231,7 @@ table4 <- xtabs(~infected + treatment, data=drug_data)
 rowPerc(table4)
 colPerc(table4)
 ```
-In the of drug users patients, the data presented in the contingency table reveals the infection status based on the treatment received (placebo and vaccine). Among drug users, 12% were infected with covid19 in the placebo group, while 88% were infected in the vaccine group. In the category of "OK" (uninfected), 51% of drug users belonged to the placebo group, and 49% to the vaccine group. Analyzing the percentages within each treatment group, 0.4% of drug users in the placebo group were infected with covid19, while 99.6% were not infected. In the vaccine group, the vaccinated were 3.1 times more likely to be infected with covid19. These findings suggest a considerably higher proportion of covid19 infections among drug users who received the vaccine compared to those who received the placebo. However, further in-depth analysis is necessary to assess the significance of these results and determine any potential associations between the treatment and infection status specifically in the drug user population. Understanding the factors influencing infection rates is crucial for tailoring effective prevention and intervention strategies in this vulnerable group.
+In the sub category of drug user patients, the data presented in the contingency table reveals the infection status based on the treatment received (placebo and vaccine). Among drug users, 12% were infected with covid19 in the placebo group, while 88% were infected in the vaccine group. In the category of "OK" (uninfected), 51% of drug users belonged to the placebo group, and 49% to the vaccine group. Analyzing the percentages within each treatment group, 0.4% of drug users in the placebo group were infected with covid19, while 99.6% were not infected. In the vaccine group, the vaccinated were 3.1 times more likely to be infected with covid19. These findings suggest a considerably higher proportion of covid19 infections among drug users who received the vaccine compared to those who received the placebo. However, further in-depth analysis is necessary to assess the significance of these results and determine any potential associations between the treatment and infection status specifically in the drug user population. Understanding the factors influencing infection rates is crucial for tailoring effective prevention and intervention strategies in this vulnerable group.
 
 ### Inferential Results
 ```{r}
@@ -260,13 +262,13 @@ In the drug user patients population, the data analysis demonstrated a treatment
 
 # Overall Results and Conclusions
 
-In conclusion, the efficacy of the Covid19 treatment was found to be inadequate in safeguarding the LGBTQ and drug users' populations. The effectiveness of the treatment for these groups was reported as `r effectivenessgay` for gay individuals and `r effectivenessdrug` for drug users.
+In conclusion, the efficacy of the Covid19 treatment with administration of covid921 vaccine was found to be inadequate in safeguarding the LGBTQ and drug users' populations. The effectiveness of the treatment for these groups was reported as `r effectivenessgay` for gay individuals and `r effectivenessdrug` for drug users.
 
 Conversely, the vaccine demonstrated notable success in protecting both women and men against Covid19. The effectiveness of the vaccine in males was `r effectivenessmale`, while in females, it was `r effectivenessfemale`. These gender-specific categories exhibited the highest level of protection with this vaccine.
 
 However, concerning individuals who identified as gay, the vaccine displayed limited efficacy. Those who identified as gay and received the vaccine were found to be 3.5 times more likely to contract Covid19 compared to those who received the placebo.Similarly, vaccinated drug users also exhibited reduced effectiveness, being 3.1 times more likely to acquire Covid19 after receiving the vaccine.
 
-As a result, if you belong to the LGBTQ community or are a drug user, it is not recommended to receive the vaccine due to its limited effectiveness. However, for individuals identifying as straight female or male, the vaccine has shown to be effective and a recommendation would be appropriate to protect against Covid19.
+As a result, if you belong to the LGBTQ community or are a drug user, it is not recommended to receive the covid921 vaccine due to its limited effectiveness. However, for individuals identifying as a straight female or male, the vaccine has shown to be effective and a recommendation would be appropriate to protect against Covid19.
 
 
 
